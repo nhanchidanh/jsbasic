@@ -2,38 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Js Basic</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Js Basic</title>
+
 </head>
 
 <body>
-  <h1 class="text-blue-700">Làm việc với String</h1>
-    
-    <script>
-        let firstname = 'nhan';
-        let lastname = 'Danh';
-        console.log('Toi la' , firstname, lastname);
+  <h1 class="text-blue-700">Làm việc với String 2</h1>
 
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  <script>
+    let firstname = 'nhan';
+    let lastname = 'Danh';
+    let string = ' Toi dang hoc JS tai F8 ';
+    //Kiem tra độ dài chuỗi
+    console.log(firstname.length);
+
+    //TÌm vị trí phân tử xuất hiện đầu tiên trong chuỗi
+    console.log(lastname.indexOf('n'));
+    //Phần tử xuất hiện cuối cùng
+    console.log(lastname.lastIndexOf('h'));
+
+    //Cắt chuỗi
+    console.log(string.slice(-2));
+
+    //thay thế chuỗi
+    console.log(string.replace(/JS/g, 'làm điên làm khùng'));
+
+    //Chuyển chuỗi thành chữ in hoặc thường
+    console.log(string.toUpperCase());
+    console.log(string.toLowerCase());
+
+    //Xóa khoảng trắng thừa ở đầu và cuối chuỗi
+    console.log(string.trim());
+
+    //Cắt chuỗi thành mảng theo một điểm chung nào đó
+    let language = 'PHP, PYTHON, HTML';
+    console.log(language.split(', '));
+
+    //Lấy chuỗi theo vị trí
+    console.log(string.charAt(1));
+    console.log(string[1]);
+
+
+  </script>
 </body>
 
 </html>

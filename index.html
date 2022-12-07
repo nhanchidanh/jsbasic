@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Basic</title>
-</head>
-<body>
-    <h1>Một số hafmg Built-in</h1>
-    <p>
-        Ham setTimeout chay doan code 1 lan sau n giay
-        <br>
-        Ham setInterval chay doan code lap lai nhieu lan sau n giay
-    </p>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // alert
-        // console.log
-        // confirm('Xac nhan ban du tuoi')
-        // prompt('nhap du lieu tu ban phim');
-
-        // setTimeout(() => {
-        //     alert('xin chao')
-        // }, 3000);
-
-        // setInterval(() => {
-        //     alert('cach 2 giay chay lai mot lan!', Math.random())
-        // }, 2000);
-        
-        
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
     </script>
+</head>
+
+<body>
+  <h1 class="text-blue-700">Làm việc với String</h1>
+    
+    <script>
+        let firstname = 'nhan';
+        let lastname = 'Danh';
+        console.log('Toi la' , firstname, lastname);
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
+
 </html>

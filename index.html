@@ -10,40 +10,50 @@
 </head>
 
 <body>
-  <h1>Làm việc với Array</h1>
+  <h1>Làm việc với Array methods</h1>
   <script>
     let language = [
       'HTML',
       'PHP',
       'RUBY',
       'DART',
-      null,
-      undefined,
-      function () {
-
-      },
-      {},
-      123
     ];
 
-    let language2 = new Array(
-      'HTML',
-      'PHP',
-      'RUBY',
-      'DART',
-      null,
-      undefined,
-      function () {
+    //Chuyển mảng thành chuỗi
+    console.log(language.toString());
+    console.log(language.join(' - '));
 
-      },
-      {},
-      123
-    )
+    //Pop Xóa phần tử cuối mảng và trả về phần tử đã xóa
+    console.log(language.pop());
+    console.log(language.pop());
+    console.log(language.pop());
+    console.log(language.pop());
+    console.log(language.pop());
+
+    //THêm một hoặc nhiều phần tử vào cuối mảng và trả về độ dài của mảng
+    console.log(language.push('dart','java','.NET'));
+
+    //Shift Xóa phần tử đầu mảng và trả về phần tử đã xóa
+    console.log(language.shift());
+    console.log(language.shift());
+    console.log(language.shift());
+    console.log(language.shift());
+
+    //unshift ngược lại với push
+    console.log(language.unshift('golang', 'PHP', 'Ruby'));
+
+    //splice Xóa phần tử tại vị trí i với số lượng n
+    console.log(language.splice(1, 1));
     console.log(language);
-    console.log(language2);
-    console.log(Array.isArray(language));
-    console.log(language.length);
-    console.log(language[0]);
+
+    console.log(language.slice(0,1));
+    console.log(language);
+    let language3 = [
+      'suong',
+      'danh'
+    ];
+
+    console.log(language.concat(language3));
   </script>
 </body>
 

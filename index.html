@@ -10,11 +10,40 @@
 </head>
 
 <body>
-  <h1>Làm việc với Number</h1>
+  <h1>Làm việc với Array</h1>
   <script>
-    let age = 22;
-    let pi = 3.14;
-    console.log(pi.toFixed(1));
+    let language = [
+      'HTML',
+      'PHP',
+      'RUBY',
+      'DART',
+      null,
+      undefined,
+      function () {
+
+      },
+      {},
+      123
+    ];
+
+    let language2 = new Array(
+      'HTML',
+      'PHP',
+      'RUBY',
+      'DART',
+      null,
+      undefined,
+      function () {
+
+      },
+      {},
+      123
+    )
+    console.log(language);
+    console.log(language2);
+    console.log(Array.isArray(language));
+    console.log(language.length);
+    console.log(language[0]);
   </script>
 </body>
 

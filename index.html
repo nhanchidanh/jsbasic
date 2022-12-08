@@ -10,31 +10,31 @@
 </head>
 
 <body>
-  <h1>Một số điều cần biết về function</h1>
-  <script>
-    function showMessage() {
-      console.log('Message 1');
+  <h1>Một số điều cần biết về Object</h1>
+<script>
+  let emailKey = 'email2'
+  var myInfo = {
+    name: 'Nhan Danh',
+    age: 22,
+    address: 'Can Tho, VN',
+    [emailKey]: 'nhancong0@gmail.com',
+    getName: function () {
+      return this.name;
     }
-    function showMessage() {
-      console.log('Message 2');
-    }
+  }
 
-    showMessage();
-    //Khi hàm trùng tên, hàm trước đó sẽ bị ghi đè
+  let myKey = 'age'
+  //Có 2 cách
+  myInfo.email = 'nhanchidanh@gmail.com';
 
-    function showMessage2() {
-      let fullName = 'Nhan Danh';
-      console.log(fullName);
-      function showMessage3() {
-        console.log('message 3');
-      }
+  delete myInfo.email2
+  console.log(myInfo);
+  console.log(myInfo.name);
+  console.log(myInfo['email']);
+  console.log(myInfo[myKey]);
+  console.log(myInfo.getName());
 
-      showMessage3()
-    }
-
-    showMessage2();
-    //Có thể khai báo biến trong hàng nhưng phạm vị biến chỉ hoạt động trong hàm. Ngoài có thể tạo hàm trong hàm và thực thi theo thứ tự trong ra ngoài, từ trên xuống
-  </script>
+</script>
 </body>
 
 </html>

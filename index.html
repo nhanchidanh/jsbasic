@@ -30,42 +30,24 @@
       }
     ]
 
-    course.forEach(function (course ,index){
-      console.log(index, course);
+    let newCourse = course.map(function (course, index, originArray) {
+      // return {
+      //   id: course.id,
+      //   name: 'Khoa hoc: '+course.name,
+      //   coin: course.coin,
+      //   coinText: 'Gia: '+ course.coin,
+      //   index: index,
+      //   originArray: originArray
+      // }
+
+      return course.name;
     })
 
-    //every: tất cả phần tử trong mảng phải thỏa mãn đk gì đó
-    var isFree = course.every(function (course, index) {
-      console.log(index);
-      return course.coin === 0;
-    })
+    console.log(newCourse);
 
-    console.log(isFree);
-
-    //some: ít nhất 1 phần tử thỏa mãn đk
-    var isFree2 = course.some(function (course, index) {
-      console.log(index);
-      return course.coin === 0;
-    })
-
-    console.log(isFree2);
-
-
-    //find: tìm kiếm phần tử đầu tiên xuất hiện
-    var isfind = course.find(function (course, index) {
-      console.log(index);
-      return course.name === 'PHP';
-    })
-
-    console.log(isfind);
-
-    //filter: trả về tất cả phần tử thỏa mãn
-    var isfilter = course.filter(function (course, index) {
-      console.log(index);
-      return course.name === 'PHP';
-    })
-
-    console.log(isfilter);
+    //số lượng phần tử trả ra bằng số lượng phần tử ban đầu
+    //Duyệt qua mảng và chỉnh sửa tùy ý cho ra mảng mới
+    //ngoài ra còn thêm chỉ mục index và originArray (mảng ban đầu nhưng ít khi được dùng) vào phần đối số
   </script>
 </body>
 

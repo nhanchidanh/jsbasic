@@ -10,24 +10,14 @@
 </head>
 
 <body>
-  <h1>Làm việc với THam số trong hàm</h1>
+  <h1>Return trong hàm</h1>
   <script>
-    function writeLog(msg, msg2) {
-      console.log('Day la dong log:', msg);
-      console.log(msg2);
+    function cong(a, b) {
+      return a+b;
     }
 
-    writeLog('123','456')
-    function writeLog2() {
-      let string = '';
-      for (const param of arguments) {
-        console.log(param);
-        string += `${param} - `
-      }
-      console.log(string);
-    }
-
-    writeLog2('log1', 'log2', 'log3');
+    let rs = cong(2,8);
+    console.log(rs);
   </script>
 </body>
 

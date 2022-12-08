@@ -12,27 +12,22 @@
 <body>
   <h1>Một số điều cần biết về Object</h1>
 <script>
-  let emailKey = 'email2'
-  var myInfo = {
-    name: 'Nhan Danh',
-    age: 22,
-    address: 'Can Tho, VN',
-    [emailKey]: 'nhancong0@gmail.com',
-    getName: function () {
-      return this.name;
-    }
-  }
+  function User(firstName, lastName, avatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
+    this.getName = function () {
+      return this.firstName + this.lastName
+    }  }
 
-  let myKey = 'age'
-  //Có 2 cách
-  myInfo.email = 'nhanchidanh@gmail.com';
+  const author = new User('Nhan', 'Danh', 'Avatar');
+  const user = new User('Vo', 'Suong', 'Avatar2');
 
-  delete myInfo.email2
-  console.log(myInfo);
-  console.log(myInfo.name);
-  console.log(myInfo['email']);
-  console.log(myInfo[myKey]);
-  console.log(myInfo.getName());
+  author.title = 'Chia se dao taiu f8';
+  user.comment = 'Lieu co khoa hoc pro kh ad?';
+
+  console.log(author.getName());
+  console.log(user.getName());
 
 </script>
 </body>

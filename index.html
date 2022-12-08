@@ -12,13 +12,42 @@
 <body>
   <h1>Làm việc với Câu lệnh rẽ nhánh if - else</h1>
   <script>
-    let course = {
-      name: 'JS',
-      coin: 250
+    //for - lặp với điều kiện đúng
+    //for in - lặp qua key
+    //for of - lặp qua value
+    //while - lặp với điều kiện đúng
+    //do while - lặp ít nhất một lần
+
+    let array = [
+      'js',
+      'PHP',
+      'java',
+      'Dart'
+    ];
+
+    for (let i = 0; i < array.length; i++) {
+      const element = array[i];
+      console.log(element);
+    }
+
+    let info = {
+      name: 'NHan Danh',
+      age: 18,
+      address: 'Can Tho, VN'
     };
 
-    let rs = course.coin > 0 ? course.coin+' coin' : 'Free';
-    console.log(rs);
+    for (const key in info) {
+      if (Object.hasOwnProperty.call(info, key)) {
+        const element = info[key];
+        console.log(element);
+        console.log(key);
+      }
+    }
+
+    for (const value of Object.values(info)) {
+      console.log(value);
+    }
+    
   </script>
 </body>
 

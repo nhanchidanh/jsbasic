@@ -12,14 +12,40 @@
 <body>
   <h1>Làm việc với Câu lệnh rẽ nhánh if - else</h1>
   <script>
-    let date = prompt('Nhap thu vao!');
-    console.log(date);
-    if (date == 2) {
-      console.log('Hom nay la thu 2');
-    }else if (date == 3) {
-      console.log('Hom nay la thu 3');  
-    } else {
-      console.log('Hom nay la thu 4');
+    let day = prompt("Nhập thứ vào ô trống!");
+    console.log(day);
+    switch (+day) {
+      case 2:
+        console.log('Hôm nay là thứ', day);
+        break;
+    
+      case 3:
+        console.log('Hôm nay là thứ', day);
+        break;
+    
+      case 4:
+        console.log('Hôm nay là thứ', day);
+        break;
+    
+      case 5:
+        console.log('Hôm nay là thứ', day);
+        break;
+    
+      case 5:
+        console.log('Hôm nay là thứ', day);
+        break;
+    
+      case 6:
+        console.log('Hôm nay là thứ', day);
+        break;
+    
+      case 7:
+        console.log('Hôm nay là thứ', day);
+        break;
+    
+      default:
+        console.log('Thứ nhập vào không hợp lệ!!');
+        break;
     }
   </script>
 </body>

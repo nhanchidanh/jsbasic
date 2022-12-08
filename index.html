@@ -25,29 +25,11 @@
       'Dart'
     ];
 
-    for (let i = 0; i < array.length; i++) {
-      const element = array[i];
-      console.log(element);
-    }
-
-    let info = {
-      name: 'NHan Danh',
-      age: 18,
-      address: 'Can Tho, VN'
-    };
-
-    for (const key in info) {
-      if (Object.hasOwnProperty.call(info, key)) {
-        const element = info[key];
-        console.log(element);
-        console.log(key);
-      }
-    }
-
-    for (const value of Object.values(info)) {
-      console.log(value);
-    }
-    
+    let i = 0;
+    do {
+      console.log(array[i]);
+      i++;
+    } while (i <= 3);
   </script>
 </body>
 

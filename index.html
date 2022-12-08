@@ -12,24 +12,60 @@
 <body>
   <h1>Làm việc với Câu lệnh rẽ nhánh if - else</h1>
   <script>
-    //for - lặp với điều kiện đúng
-    //for in - lặp qua key
-    //for of - lặp qua value
-    //while - lặp với điều kiện đúng
-    //do while - lặp ít nhất một lần
+    let course = [
+      {
+        id: 1,
+        name: 'JS',
+        coin: 20
+      },
+      {
+        id: 2,
+        name: 'PHP',
+        coin: 0
+      },
+      {
+        id: 3,
+        name: 'Ruby',
+        coin: 0
+      }
+    ]
 
-    let array = [
-      'js',
-      'PHP',
-      'java',
-      'Dart'
-    ];
+    course.forEach(function (course ,index){
+      console.log(index, course);
+    })
 
-    let i = 0;
-    do {
-      console.log(array[i]);
-      i++;
-    } while (i <= 3);
+    //every: tất cả phần tử trong mảng phải thỏa mãn đk gì đó
+    var isFree = course.every(function (course, index) {
+      console.log(index);
+      return course.coin === 0;
+    })
+
+    console.log(isFree);
+
+    //some: ít nhất 1 phần tử thỏa mãn đk
+    var isFree2 = course.some(function (course, index) {
+      console.log(index);
+      return course.coin === 0;
+    })
+
+    console.log(isFree2);
+
+
+    //find: tìm kiếm phần tử đầu tiên xuất hiện
+    var isfind = course.find(function (course, index) {
+      console.log(index);
+      return course.name === 'PHP';
+    })
+
+    console.log(isfind);
+
+    //filter: trả về tất cả phần tử thỏa mãn
+    var isfilter = course.filter(function (course, index) {
+      console.log(index);
+      return course.name === 'PHP';
+    })
+
+    console.log(isfilter);
   </script>
 </body>
 

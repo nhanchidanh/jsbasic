@@ -10,30 +10,17 @@
 </head>
 
 <body>
-  <h1>Một số điều cần biết về Object prototype</h1>
+  <h1>Đối tượng Date()</h1>
 <script>
-  function User(firstName, lastName, avatar) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.avatar = avatar;
-    this.getName = function () {
-      return this.firstName + this.lastName
-    }  }
+  const date = new Date();
 
-  const author = new User('Nhan', 'Danh', 'Avatar');
-  const user = new User('Vo', 'Suong', 'Avatar2');
-
-  author.title = 'Chia se dao taiu f8';
-  user.comment = 'Lieu co khoa hoc pro kh ad?';
-  User.prototype.className = 'F8';
-  User.prototype.getClassname = function(){
-    return this.className;
-  }
-
-  console.log(author.getName());
-  console.log(user.getName());
-  console.log(user);
-  console.log(author);
+  console.log( date.getFullYear());
+  console.log( date.getMonth()+1);
+  console.log( date.getDate());
+  console.log( date.getDay());
+  console.log( date.getHours());
+  console.log( date.getMinutes());
+  console.log( date.getSeconds());
 
 </script>
 </body>

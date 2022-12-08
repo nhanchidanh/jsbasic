@@ -10,14 +10,30 @@
 </head>
 
 <body>
-  <h1>Return trong hàm</h1>
+  <h1>Một số điều cần biết về function</h1>
   <script>
-    function cong(a, b) {
-      return a+b;
+    function showMessage() {
+      console.log('Message 1');
+    }
+    function showMessage() {
+      console.log('Message 2');
     }
 
-    let rs = cong(2,8);
-    console.log(rs);
+    showMessage();
+    //Khi hàm trùng tên, hàm trước đó sẽ bị ghi đè
+
+    function showMessage2() {
+      let fullName = 'Nhan Danh';
+      console.log(fullName);
+      function showMessage3() {
+        console.log('message 3');
+      }
+
+      showMessage3()
+    }
+
+    showMessage2();
+    //Có thể khai báo biến trong hàng nhưng phạm vị biến chỉ hoạt động trong hàm. Ngoài có thể tạo hàm trong hàm và thực thi theo thứ tự trong ra ngoài, từ trên xuống
   </script>
 </body>
 

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <h1>Một số điều cần biết về Object</h1>
+  <h1>Một số điều cần biết về Object prototype</h1>
 <script>
   function User(firstName, lastName, avatar) {
     this.firstName = firstName;
@@ -25,9 +25,15 @@
 
   author.title = 'Chia se dao taiu f8';
   user.comment = 'Lieu co khoa hoc pro kh ad?';
+  User.prototype.className = 'F8';
+  User.prototype.getClassname = function(){
+    return this.className;
+  }
 
   console.log(author.getName());
   console.log(user.getName());
+  console.log(user);
+  console.log(author);
 
 </script>
 </body>

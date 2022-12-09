@@ -10,45 +10,47 @@
 </head>
 
 <body>
-  <h1>Làm việc với My filter method</h1>
+  <h1>Làm việc với some() method</h1>
   <script>
-
-    Array.prototype.filter2 = function (callback) {
-      var output = [];
+    Array.prototype.some2 = function (callback) {
+      output = false;
       for (const index in this) {
         if (Object.hasOwnProperty.call(this, index)) {
-          let rs = callback(this[index], index, this);  
-          if (rs) {
-            output.push(this[index]);
-          }        
+          if (callback(this[index], index, this) ) {
+            output = true;
+            break;
+          }           
         }
       }
-
       return output;
     }
+
     let courses = [
       {
         name: 'JS',
-        coin: 680
+        coin: 680,
+        isFinish: true,
       },
       {
         name: 'PHP',
-        coin: 860
+        coin: 860,
+        isFinish: false,
       },
       {
         name: 'RB',
-        coin: 980
+        coin: 980,
+        isFinish: false,
       },
     ];
 
     // console.log(courses);
-
-    let filterCourses = courses.filter2(function (course, index, array) {
-      // console.log(course, index, array);
-      return course.coin > 700;
+    let rs = courses.some2(function (course, index, array) {
+      return course.isFinish;
     })
 
-    console.log(filterCourses);
+    console.log(rs);
+
+    //Some(): kiểm tra ít nhất một phần tử thỏa mãn điều kiện
   </script>
 </body>
 

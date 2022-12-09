@@ -10,15 +10,17 @@
 </head>
 
 <body>
-  <h1>Làm việc với String/Array include() method</h1>
+  <h1>Làm việc với Empty Element of Array</h1>
   <script>
-    //String: kiểm tra xem chuỗi có từ ... hay không? và tìm từ vị trí nào?
-    let title = 'Responsive web design';
-    console.log(title.includes('web'));
+    let courses = [
+      'JS',
+      'PHP'
+    ];
 
-    //Array: 
-    let Array = ['JS', 'PHP', 'HTML'];
-    console.log(Array.includes('PHP',3));
+    courses.length = 10;
+    console.log(courses.length);
+    console.log(courses);
+    
   </script>
 </body>
 

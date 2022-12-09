@@ -10,14 +10,14 @@
 </head>
 
 <body>
-  <h1>Làm việc với some() method</h1>
+  <h1>Làm việc với every() method</h1>
   <script>
-    Array.prototype.some2 = function (callback) {
-      output = false;
+    Array.prototype.every2 = function (callback) {
+      output = true;
       for (const index in this) {
         if (Object.hasOwnProperty.call(this, index)) {
-          if (callback(this[index], index, this) ) {
-            output = true;
+          if (!callback(this[index], index, this) ) {
+            output = false;
             break;
           }           
         }
@@ -34,7 +34,7 @@
       {
         name: 'PHP',
         coin: 860,
-        isFinish: false,
+        isFinish: true,
       },
       {
         name: 'RB',
@@ -44,13 +44,13 @@
     ];
 
     // console.log(courses);
-    let rs = courses.some2(function (course, index, array) {
-      return course.isFinish;
+    let rs = courses.every2(function (course, index, array) {
+      return course.coin > 680;
     })
 
     console.log(rs);
 
-    //Some(): kiểm tra ít nhất một phần tử thỏa mãn điều kiện
+    //every(): kiểm tra tat ca phần tử thỏa mãn điều kiện
   </script>
 </body>
 

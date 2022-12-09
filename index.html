@@ -10,16 +10,13 @@
 </head>
 
 <body>
-  <h1 id="heading" class="heading">Làm việc với HTML DOM</h1>
-  <h1 id="heading" class="heading">Làm việc với HTML DOM</h1>
-  <h1 id="heading" class="heading">Làm việc với HTML DOM</h1>
-  <p>Hello Guys!</p>
-  <div class="box-1">
-    <ul>
-      <li>JS</li>
-      <li>PHP</li>
-      <li>CSS</li>
-    </ul>
+  <h1 id="heading" class="heading">Làm việc với HTML DOM Attribute
+    <span>danh</span>
+    <span>suong</span>
+  </h1>
+
+  <div class="box">
+
   </div>
 
   <script>
@@ -30,28 +27,17 @@
     3 text: nội dung thẻ
     */
 
-    var headingNode = document.getElementById('heading');
-    console.log({element: headingNode});
-    var headingNodes = document.getElementsByClassName('heading');
-    console.log(headingNodes); 
-    var headingNodess = document.getElementsByTagName('p');
-    console.log(headingNodess);
+    //innertext và textcontent (kh thể thêm html)
+    let headingElement = document.querySelector('h1');
+    // headingElement.innerHTML = 'hello';
+    console.log(headingElement.innerText);
+    console.log(headingElement.textContent);
 
-    let headingNodesss = document.querySelector('.heading')
-    console.log(headingNodesss);
+    //innerHTML, outerHTML (có thể thêm html)
+    let boxElement = document.querySelector('.box');
+    // console.log(boxElement);
 
-    let headingNodessss = document.querySelectorAll('.heading')
-    console.log(headingNodessss);
-
-    //Cach 1
-    let listItemNodes = document.querySelectorAll('.box-1 li');
-    console.log(listItemNodes);
-
-    //Cach 2
-    let boxNode = document.querySelector('.box-1');
-    console.log(boxNode);
-    boxNodes = boxNode.querySelectorAll('li');
-    console.log(boxNodes);
+    boxElement.innerHTML = '<h1>Heading</h1>';
   </script>
 </body>
 

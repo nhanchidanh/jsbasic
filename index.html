@@ -10,47 +10,48 @@
 </head>
 
 <body>
-  <h1>Làm việc với every() method</h1>
+  <h1 id="heading" class="heading">Làm việc với HTML DOM</h1>
+  <h1 id="heading" class="heading">Làm việc với HTML DOM</h1>
+  <h1 id="heading" class="heading">Làm việc với HTML DOM</h1>
+  <p>Hello Guys!</p>
+  <div class="box-1">
+    <ul>
+      <li>JS</li>
+      <li>PHP</li>
+      <li>CSS</li>
+    </ul>
+  </div>
+
   <script>
-    Array.prototype.every2 = function (callback) {
-      output = true;
-      for (const index in this) {
-        if (Object.hasOwnProperty.call(this, index)) {
-          if (!callback(this[index], index, this) ) {
-            output = false;
-            break;
-          }           
-        }
-      }
-      return output;
-    }
+  //Có 3 thành phần
+    /*
+    1 element: ID, class, tag, css selector, html collection
+    2 attribute: href, class, id, title,...
+    3 text: nội dung thẻ
+    */
 
-    let courses = [
-      {
-        name: 'JS',
-        coin: 680,
-        isFinish: true,
-      },
-      {
-        name: 'PHP',
-        coin: 860,
-        isFinish: true,
-      },
-      {
-        name: 'RB',
-        coin: 980,
-        isFinish: false,
-      },
-    ];
+    var headingNode = document.getElementById('heading');
+    console.log({element: headingNode});
+    var headingNodes = document.getElementsByClassName('heading');
+    console.log(headingNodes); 
+    var headingNodess = document.getElementsByTagName('p');
+    console.log(headingNodess);
 
-    // console.log(courses);
-    let rs = courses.every2(function (course, index, array) {
-      return course.coin > 680;
-    })
+    let headingNodesss = document.querySelector('.heading')
+    console.log(headingNodesss);
 
-    console.log(rs);
+    let headingNodessss = document.querySelectorAll('.heading')
+    console.log(headingNodessss);
 
-    //every(): kiểm tra tat ca phần tử thỏa mãn điều kiện
+    //Cach 1
+    let listItemNodes = document.querySelectorAll('.box-1 li');
+    console.log(listItemNodes);
+
+    //Cach 2
+    let boxNode = document.querySelector('.box-1');
+    console.log(boxNode);
+    boxNodes = boxNode.querySelectorAll('li');
+    console.log(boxNodes);
   </script>
 </body>
 

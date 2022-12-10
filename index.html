@@ -15,22 +15,20 @@
 </head>
 
 <body>
-  <h1 id="heading" class="heading">Làm việc với Classlist Property</h1>
-  <div class="box box-2"></div>
-  <script>
-    let boxElement = document.querySelector('.box');
-    // console.log(boxElement.style);
-    boxElement.textContent = 'heading'
-    console.log(boxElement.classList);
-
-    boxElement.classList.add('red', 'blue');
-    console.log(boxElement.classList.contains('red'));
-    boxElement.classList.remove('red')
-
-    setInterval(() => {
-      boxElement.classList.toggle('red')
-    }, 1000);
-  </script>
+  <h1 ondrag="console.log(this)" id="heading" class="heading">Làm việc với DOM Event 1</h1>
+  <h1 ondrag="console.log(this)" id="heading" class="heading">Làm việc với DOM Event 2</h1>
+  <h1 ondrag="console.log(this)" id="heading" class="heading">Làm việc với DOM Event 3</h1>
+  
+<script>
+  h1Element = document.querySelectorAll('.heading');
+  // console.log(h1Element);
+  // console.log(h1Element);
+   h1Element.forEach(item => {
+    item.onclick= function (e) {
+      console.log(e.target);
+    }
+   });
+</script>
 </body>
 
 </html>

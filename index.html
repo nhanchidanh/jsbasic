@@ -7,29 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Js Basic</title>
 
+  <style>
+    .red{
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 id="heading" class="heading">Làm việc với DOM STYLE</h1>
-  <div class="box"></div>
+  <h1 id="heading" class="heading">Làm việc với Classlist Property</h1>
+  <div class="box box-2"></div>
   <script>
     let boxElement = document.querySelector('.box');
     // console.log(boxElement.style);
+    boxElement.textContent = 'heading'
+    console.log(boxElement.classList);
 
-    //ElementName.style.propertyCSS = ''
-    // boxElement.style.width = '100px';
-    // boxElement.style.height = '200px';
-    // boxElement.style.backgroundColor = 'red';
+    boxElement.classList.add('red', 'blue');
+    console.log(boxElement.classList.contains('red'));
+    boxElement.classList.remove('red')
 
-    //Ngoài ra còn có cách viết gộp
-    Object.assign(boxElement.style, {
-      width: '200px',
-      height: '100px',
-      backgroundColor: 'green',
-      border: '1px solid #ccc'
-    });
-
-    console.log(boxElement.style.width);
+    setInterval(() => {
+      boxElement.classList.toggle('red')
+    }, 1000);
   </script>
 </body>
 

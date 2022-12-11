@@ -2,36 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Js Basic</title>
-  <style>
-    ul{
-      display: none;
-    }
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Js Basic</title>
+	<style>
+		ul {
+			display: none;
+		}
 
-    input:focus ~ ul{
-      display: block;
-    }
-  </style>
+		input:focus~ul {
+			display: block;
+		}
+	</style>
 </head>
 
 <body>
-  <button id="btn">Clickme</button>
+	<button id="btn">Clickme</button>
 
-  <script>
-    //Json la mot dinh dang du lieu (chuỗi)
-    //Javascript Object Notation
-    //JSON: Number, Boolean,String,null,object, array...
+	<script>
+		//Sync
+		//Async
+		//Noi dau
 
-    //mã hóa/ giải mã
-    //Stringify: javascript type -> JSON
-    // parse: JSON -> Javascript types
-    //Encode / decode
+		//callback hell
+		//pyramid of doom
 
-    var JSON = ' '
-  </script>
+		//Pending: khi chua resolve(), reject()
+		var promise = new Promise(
+			//Executor: func dc thuc thi sau khi goi promise
+			function (resolve, reject) {
+				//Logic
+				//Thành công resolve()
+				//that bai: reject()
+                // resolve([
+                //     {
+                //         id: 1,
+                //         name: 'Javascript'
+                //     }
+                // ]);
+                reject('co loi');
+			});
+			
+        promise
+            .then(function (courses) {
+                console.log('successfully!');
+                console.log(courses);
+            })
+            .catch(function (error) {
+                console.log('Failure');
+                console.log(error);
+            })
+            // .finally(function () {
+            //     console.log('Done');
+            // })
+
+
+    //Promise: sinh ra để xữ lí thao tác bất đồng bộ sinh ra trong phiên bản sau này khắc phục tình trạng callback hell. resolve được gọi khi thao tác thành công, reject() được gọi khi thao tác thất bại
+
+    //Promise thuực thi vào then() khi có resolve, catch() khi có reject()
+	</script>
 </body>
 
 </html>

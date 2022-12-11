@@ -28,7 +28,10 @@
 		//callback hell
 		//pyramid of doom
 
-		//Pending: khi chua resolve(), reject()
+        //3 trạng thái
+		//Pending:đang chờ thành công hay thất bại khi chua resolve(), reject()
+        //Fullfilled: thành công
+        //Rejected: đã thất bại
 		var promise = new Promise(
 			//Executor: func dc thuc thi sau khi goi promise
 			function (resolve, reject) {

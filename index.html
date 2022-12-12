@@ -12,31 +12,36 @@
 <body>
 
 	<script>
-		// function Course(name, price) {
-        //     this.name = name;
-        //     this.price = price;
-        // }
+		var array = ['JS', 'PHP', 'RB'];
 
-        class Course {
-            constructor(name, price){
-                this.name = name;
-                this.price = price;
-                
-            }
-            getName() {
-                return this.name;
-            }
+        // var a = array[0];
+        // var b = array[1];
+        // var c = array[2];
 
-            getPrice(){
-                return this.price;
-            }
+        //Cach khac ngan gon hon
+        // var [a,,c] = array
+        var [...rest] = array
+
+        // console.log(a);
+        console.log(rest);
+
+        var Course = {
+            name: 'JS',
+            price: 1000,
+            image: 'image-address',
+            // description
+        };
+
+        var {name, description = 'default description'} = Course
+
+        console.log(name);
+        console.log(description);
+
+        function logger(...params) {
+            console.log( params.join('-'));
         }
 
-        const phpCourse = new Course('PHP', 1000);
-        const jsCourse = new Course('Javascript', 1200);
-
-        console.log(phpCourse);
-        console.log(jsCourse);
+        console.log(logger(1,2,3,4,5,6,7,8));
 	</script>
 </body>
 

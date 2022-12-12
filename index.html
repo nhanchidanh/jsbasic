@@ -12,10 +12,32 @@
 <body>
 
 	<script>
-		const courseName = 'JS';
-        // const description = 'Course name: '+courseName;
-        const description = `Course name: ${courseName}`;
-        console.log(description);
+		const logger = (log) => {
+            console.log(log);
+        }
+
+        logger('Danh khung')
+
+        // const sum = (a, b) => {
+        //     return a+b;
+        // }
+
+        //kh co dau {}...tự hiểu là return
+        const sum = (a,b) => a+b
+        console.log(sum(2,4));
+
+        //trường hợp chỉ có 1 param thì bỏ dấu ()
+        const logger2 = log2 => console.log(log2);
+        logger2('Suong khung');
+
+        const course = {
+            name: 'JS',
+            getName: function () {
+                return this.name;
+            }
+        }
+
+        console.log(course.getName());
 	</script>
 </body>
 

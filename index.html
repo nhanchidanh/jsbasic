@@ -12,32 +12,31 @@
 <body>
 
 	<script>
-		const logger = (log) => {
-            console.log(log);
-        }
-
-        logger('Danh khung')
-
-        // const sum = (a, b) => {
-        //     return a+b;
+		// function Course(name, price) {
+        //     this.name = name;
+        //     this.price = price;
         // }
 
-        //kh co dau {}...tự hiểu là return
-        const sum = (a,b) => a+b
-        console.log(sum(2,4));
-
-        //trường hợp chỉ có 1 param thì bỏ dấu ()
-        const logger2 = log2 => console.log(log2);
-        logger2('Suong khung');
-
-        const course = {
-            name: 'JS',
-            getName: function () {
+        class Course {
+            constructor(name, price){
+                this.name = name;
+                this.price = price;
+                
+            }
+            getName() {
                 return this.name;
+            }
+
+            getPrice(){
+                return this.price;
             }
         }
 
-        console.log(course.getName());
+        const phpCourse = new Course('PHP', 1000);
+        const jsCourse = new Course('Javascript', 1200);
+
+        console.log(phpCourse);
+        console.log(jsCourse);
 	</script>
 </body>
 
